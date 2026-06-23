@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CME AI Community of Practice — Frontend MVP
 
-## Getting Started
+A frontend prototype for CME's secure AI Community of Practice platform. Manufacturers can explore the AI Workbench, recipe library, and admin console using simulated data — no backend required.
 
-First, run the development server:
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Password for all accounts: `demo1234`
 
-## Learn More
+| Role | Email |
+|------|-------|
+| Admin | `admin@cme.ca` |
+| Participant | `jane@acmemfg.ca` |
+| Viewer | `viewer@acmemfg.ca` |
 
-To learn more about Next.js, take a look at the following resources:
+Additional seed users are available in `src/lib/mock/seed.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Login** — mock email/password authentication with role-based access
+- **Dashboard** — quick links and admin summary widgets
+- **AI Workbench** — test prompts with simulated GPT-4o mini and Claude 3.5 Haiku responses
+- **Recipe Library** — search, filter, and browse approved recipes
+- **Submit Recipe** — create drafts and submit for approval
+- **Admin Console** — manage users, companies, recipe approvals, and view activity
 
-## Deploy on Vercel
+## Demo script
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Log in as `jane@acmemfg.ca` (participant)
+2. Open **AI Workbench**, run a prompt, then **Save as draft recipe**
+3. Complete the recipe form and **Submit for approval**
+4. Log out and sign in as `admin@cme.ca`
+5. Open **Admin → Approvals**, review the recipe, and approve it
+6. Log in as `viewer@acmemfg.ca` — confirm the approved recipe is visible but workbench is not accessible
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Data persistence
+
+- Session and mutations are stored in browser `localStorage`
+- Use **Reset demo data** in the Admin Console to restore seed data
+- A banner reminds users this is a non-secure prototype
+
+## Phase 2 migration
+
+The data layer in `src/lib/data/` is designed to be swapped for Supabase + server-side API routes without rewriting UI components. See `.env.example` for planned environment variables.
+
+## Tech stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4 + shadcn/ui
+- React Context + localStorage
+
+## Non-goals (this prototype)
+
+- Real authentication, database, or AI API integration
+- Enterprise SSO, billing, or production integrations
