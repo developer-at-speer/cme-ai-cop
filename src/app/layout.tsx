@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CME AI Community of Practice",
   description:
-    "Secure AI workbench and recipe library for manufacturers adopting AI",
+    "Secure AI workbench and recipe library for Canadian manufacturers",
+  icons: {
+    icon: "/cme-logo.svg",
+  },
 };
 
 export default function RootLayout({

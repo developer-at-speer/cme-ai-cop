@@ -34,8 +34,8 @@ import {
 function DetailField({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <h3 className="text-sm font-semibold text-slate-700">{label}</h3>
-      <p className="mt-1 whitespace-pre-wrap text-sm text-slate-600">{value || "—"}</p>
+      <h3 className="text-sm font-semibold text-cme-black">{label}</h3>
+      <p className="mt-1 whitespace-pre-wrap text-sm text-neutral-600">{value || "—"}</p>
     </div>
   );
 }

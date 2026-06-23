@@ -7,7 +7,7 @@ import { SideNav } from "@/components/layout/SideNav";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <ProtectedRoute>
-      <div className="flex min-h-screen flex-col bg-slate-50">
+      <div className="flex min-h-screen flex-col bg-neutral-50">
         <DemoBanner />
         <div className="flex flex-1">
           <SideNav />

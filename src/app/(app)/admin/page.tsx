@@ -69,7 +69,7 @@ export default function AdminOverviewPage() {
             return (
               <Card key={item.href} className="transition-shadow hover:shadow-md">
                 <CardHeader>
-                  <Icon className="h-5 w-5 text-blue-600" />
+                  <Icon className="h-5 w-5 text-cme-red" />
                   <CardTitle className="text-base">{item.label}</CardTitle>
                   <CardDescription>{item.desc}</CardDescription>
                 </CardHeader>

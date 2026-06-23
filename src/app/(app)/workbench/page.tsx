@@ -176,14 +176,14 @@ export default function WorkbenchPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="min-h-[240px] rounded-lg border bg-slate-50 p-4">
+              <div className="min-h-[240px] rounded-lg border bg-neutral-50 p-4">
                 {loading ? (
                   <div className="flex items-center justify-center py-16 text-muted-foreground">
                     <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                     Generating response...
                   </div>
                 ) : response ? (
-                  <pre className="whitespace-pre-wrap text-sm text-slate-700 font-sans">
+                  <pre className="whitespace-pre-wrap font-sans text-sm text-neutral-700">
                     {response}
                   </pre>
                 ) : (

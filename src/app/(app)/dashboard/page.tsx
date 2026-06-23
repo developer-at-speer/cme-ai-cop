@@ -63,7 +63,7 @@ export default function DashboardPage() {
       <AppHeader title="Dashboard" />
       <div className="flex-1 p-4 md:p-6">
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-slate-900">
+          <h2 className="text-2xl font-semibold text-cme-black">
             Welcome back, {user.name}
           </h2>
           <p className="mt-1 text-sm text-muted-foreground">
@@ -78,7 +78,7 @@ export default function DashboardPage() {
             return (
               <Card key={link.href} className="transition-shadow hover:shadow-md">
                 <CardHeader>
-                  <Icon className="h-5 w-5 text-blue-600" />
+                  <Icon className="h-5 w-5 text-cme-red" />
                   <CardTitle className="text-base">{link.label}</CardTitle>
                   <CardDescription>{link.description}</CardDescription>
                 </CardHeader>

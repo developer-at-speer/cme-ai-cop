@@ -105,7 +105,7 @@ export default function RecipesPage() {
                         <TableCell>
                           <Link
                             href={`/recipes/${recipe.id}`}
-                            className="font-medium text-blue-600 hover:underline"
+                            className="font-medium text-cme-red hover:underline"
                           >
                             {recipe.title}
                           </Link>
